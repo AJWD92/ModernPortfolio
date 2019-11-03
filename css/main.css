@@ -1,3 +1,21 @@
+.easeOut {
+  transition: all 0.5s ease-out;
+}
+.background#bgImg {
+  background-image: url(/Img/homeImg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.background#bgImg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(68, 68, 68, 0.9);
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -134,7 +152,7 @@ html {
 }
 html,
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h1,
 h2,
@@ -142,9 +160,81 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  font-weight: 400;
 }
 body {
   background: #444;
   color: #FFF;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  line-height: 1.5;
+}
+body#bgImg {
+  background-image: url(/Img/homeImg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+body#bgImg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgba(68, 68, 68, 0.9);
+}
+h1.lgHeading,
+h2.lgHeading,
+h3.lgHeading,
+h4.lgHeading,
+h5.lgHeading,
+h6.lgHeading {
+  font-size: 6rem;
+}
+h1.smHeading,
+h2.smHeading,
+h3.smHeading,
+h4.smHeading,
+h5.smHeading,
+h6.smHeading {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(69, 69, 69, 0.5);
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+.textSecondary {
+  color: #1e90ff;
+}
+main {
+  padding: 4rem;
+  height: 100%;
+}
+main .icons {
+  margin-top: 1rem;
+}
+main .icons a {
+  padding: 0.4rem;
+}
+main .icons a:hover {
+  color: #1e90ff;
+  transition: all 0.5s ease-out;
+}
+main#home {
+  overflow: hidden;
+}
+main#home h1 {
+  margin-top: 20vh;
 }
