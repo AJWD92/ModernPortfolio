@@ -16,6 +16,16 @@
   z-index: -1;
   background: rgba(68, 68, 68, 0.9);
 }
+.btn {
+  display: block;
+  padding: 0.8rem 1.6rem;
+  border: 0;
+  margin-bottom: 0.4rem;
+}
+.btn:hover {
+  background: #1e90ff;
+  color: #ffffff;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -429,6 +439,54 @@ main#home h1 {
   background: #515151;
   padding: 0.8rem;
   border-bottom: #1e90ff 0.5rem solid;
+}
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.8rem;
+}
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+.projects img {
+  width: 100%;
+  border: 3px #B22222 solid;
+}
+.projects img:hover {
+  opacity: 0.5;
+  border-color: #1e90ff;
+  transition: all 0.5s ease-out;
+}
+.btnDark {
+  display: block;
+  padding: 0.8rem 1.6rem;
+  border: 0;
+  margin-bottom: 0.4rem;
+  background: #000000;
+  color: #ffffff;
+}
+.btnDark:hover {
+  background: #1e90ff;
+  color: #ffffff;
+}
+.btnLight {
+  display: block;
+  padding: 0.8rem 1.6rem;
+  border: 0;
+  margin-bottom: 0.4rem;
+  background: #c3c3c3;
+  color: #333;
+}
+.btnLight:hover {
+  background: #1e90ff;
+  color: #ffffff;
 }
 #mainFooter {
   width: 100%;

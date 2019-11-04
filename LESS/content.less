@@ -116,6 +116,40 @@ main {
     border-bottom: @secondaryColor 0.5rem solid;
 }
 
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.8rem;
+    @media @deviceMd {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media @deviceSm {
+        grid-template-columns: 1fr;
+    }
+    img {
+        width: 100%;
+        border: 3px #B22222 solid;
+
+        &:hover {
+            opacity: 0.5;
+            border-color: @secondaryColor;
+            .easeOut();
+        }
+    }
+}
+
+.btnDark {
+.btn();
+background: darken(@primaryColor, 50);
+color: #ffffff;
+}
+
+.btnLight {
+    .btn();
+    background: lighten(@primaryColor, 50);
+    color: #333;
+}
+
 #mainFooter {
     width: 100%;
     text-align: center;
@@ -124,3 +158,4 @@ main {
     color: #ffffff;
     height: 6rem;
 }
+
