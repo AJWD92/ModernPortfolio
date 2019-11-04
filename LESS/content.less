@@ -30,6 +30,7 @@ header {
 main {
     padding: 4rem;
     height: 100%;
+    min-height: calc(100vh - 6rem);
 
     @media @deviceMd {
         align-items: center;
@@ -65,4 +66,61 @@ main {
             margin-top: 20vh;
         }
     }
+}
+
+.aboutInfo {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-areas: 'bioImage bio bio' 'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+
+    @media @deviceMd {
+        grid-template-areas: 'bioImage' 'bio' 'job1' 'job2' 'job3';
+
+        grid-template-columns: 1fr;
+    }
+}
+
+.bioImage {
+    grid-area: bioImage;
+    margin: auto;
+    border-radius: 50%;
+    border: @secondaryColor 0.3rem solid;
+}
+
+.bio {
+    grid-area: bio;
+    font-size: 2.4rem;
+}
+
+.job1 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    grid-area: job1;
+}
+
+.job2 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    grid-area: job2;
+}
+.job3 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    grid-area: job3;
+}
+
+.job {
+    background: lighten(@primaryColor, 5);
+    padding: 0.8rem;
+    border-bottom: @secondaryColor 0.5rem solid;
+}
+
+#mainFooter {
+    width: 100%;
+    text-align: center;
+    padding: 1.6rem;
+    background: darken(@primaryColor, 10);
+    color: #ffffff;
+    height: 6rem;
 }
