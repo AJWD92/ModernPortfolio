@@ -288,6 +288,38 @@ img {
 .menu .navLink:hover {
   color: #1e90ff;
 }
+@media (max-width: 768px) {
+  ul.menuNav {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 2.4rem;
+  }
+  ul.menuNav.show {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media (max-width: 768px) {
+  div.menuBranding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+    height: 25vh;
+    transform: translate3d(100%, 0, 0);
+  }
+  div.menuBranding.show {
+    transform: translate3d(0, 0, 0);
+  }
+  div.menuBranding .portrait {
+    background: url(/Img/profileSm.jpg);
+    width: 15rem;
+    height: 15rem;
+    background-position: center;
+    background-size: cover;
+  }
+}
 h1.lgHeading,
 h2.lgHeading,
 h3.lgHeading,
@@ -323,6 +355,21 @@ header {
 main {
   padding: 4rem;
   height: 100%;
+}
+@media (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  main .lgHeading {
+    line-height: 1;
+    margin-bottom: 1.6rem;
+  }
+}
+@media (max-width: 500px) {
+  main #home h1 {
+    margin-top: 10vh;
+  }
 }
 main .icons {
   margin-top: 1rem;

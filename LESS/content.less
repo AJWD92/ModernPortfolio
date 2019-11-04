@@ -31,6 +31,22 @@ main {
     padding: 4rem;
     height: 100%;
 
+    @media @deviceMd {
+        align-items: center;
+        text-align: center;
+
+        .lgHeading {
+            line-height: 1;
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    @media @deviceSm {
+        #home h1 {
+            margin-top: 10vh;
+        }
+    }
+
     .icons {
         margin-top: 1rem;
 
