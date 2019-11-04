@@ -2,7 +2,7 @@
   transition: all 0.5s ease-out;
 }
 .background#bgImg {
-  background-image: url(/Img/homeImg.jpg);
+  background-image: url(/Img/homeImg4.jpeg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -173,7 +173,7 @@ body {
   line-height: 1.5;
 }
 body#bgImg {
-  background-image: url(/Img/homeImg.jpg);
+  background-image: url(/Img/homeImg4.jpeg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -186,6 +186,36 @@ body#bgImg::after {
   height: 100%;
   z-index: -1;
   background: rgba(68, 68, 68, 0.9);
+}
+img {
+  max-width: 100%;
+}
+.menuBtn {
+  position: absolute;
+  z-index: 3;
+  right: 3.5rem;
+  top: 3.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.menuBtn .btnLine {
+  width: 2.8rem;
+  height: 0.3rem;
+  margin: 0 0 0.5rem 0;
+  background: #fff;
+  transition: all 0.5s ease-out;
+}
+.menuBtn.close {
+  transform: rotate(180deg);
+}
+.menuBtn.close .btnLine:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menuBtn.close .btnLine:nth-child(2) {
+  opacity: 0;
+}
+.menuBtn.close .btnLine:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 h1.lgHeading,
 h2.lgHeading,
@@ -209,6 +239,7 @@ h6.smHeading {
 a {
   color: #ffffff;
   text-decoration: none;
+  font-size: 1.6rem;
 }
 header {
   position: fixed;

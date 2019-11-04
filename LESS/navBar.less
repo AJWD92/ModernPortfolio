@@ -1,0 +1,32 @@
+.menuBtn {
+    position: absolute;
+    z-index: 3;
+    right: 3.5rem;
+    top: 3.5rem;
+    cursor: pointer;
+    .easeOut();
+
+    .btnLine {
+        width: 2.8rem;
+        height: 0.3rem;
+        margin: 0 0 0.5rem 0;
+        background: #fff;
+        .easeOut();
+    }
+
+    &.close {
+        transform: rotate(180deg);
+
+        .btnLine {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+        }
+    }
+}
