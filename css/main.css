@@ -217,6 +217,77 @@ img {
 .menuBtn.close .btnLine:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
 }
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+}
+.menu.show {
+  visibility: visible;
+}
+.menuBranding,
+.menuNav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+.menuNav {
+  margin: 0;
+  padding: 0;
+  background: #373737;
+  list-style: none;
+  transform: translate3d(0, -100%, 0);
+  transition: all 0.5s ease-out;
+}
+.menuNav.show {
+  transform: translate3d(0, 0, 0);
+}
+.menuBranding {
+  background: #444;
+  transition: all 0.5s ease-out;
+  transform: translate3d(0, 100%, 0);
+}
+.menuBranding.show {
+  transform: translate3d(0, 0, 0);
+}
+.menuBranding .portrait {
+  width: 25rem;
+  height: 25rem;
+  background: url(/Img/profileSm.jpg);
+  border-radius: 50%;
+  border: solid 0.3rem #1e90ff;
+  background-position: center;
+}
+.menu .navItem {
+  transform: translate3d(60rem, 0, 0);
+  transition: all 0.5s ease-out;
+}
+.menu .navItem.show {
+  transform: translate3d(0, 0, 0);
+}
+.menu .navItem.active > a {
+  color: #1e90ff;
+}
+.menu .navLink {
+  display: inline-block;
+  position: relative;
+  font-size: 3rem;
+  text-transform: uppercase;
+  padding: 1.6rem 0;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+}
+.menu .navLink:hover {
+  color: #1e90ff;
+}
 h1.lgHeading,
 h2.lgHeading,
 h3.lgHeading,
