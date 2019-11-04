@@ -464,6 +464,28 @@ main#home h1 {
   border-color: #1e90ff;
   transition: all 0.5s ease-out;
 }
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+.boxes div {
+  font-size: 3.2rem;
+  border: #ffffff 3px solid;
+  padding: 2.4rem 4rem;
+  margin-bottom: 4.8rem;
+  transition: all 0.5s ease-out;
+}
+.boxes div:hover {
+  padding: 0.8rem 2.4rem;
+  background: #1e90ff;
+  color: #ffffff;
+}
+.boxes div:hover span {
+  color: #444;
+}
 .btnDark {
   display: block;
   padding: 0.8rem 1.6rem;

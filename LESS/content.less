@@ -138,6 +138,33 @@ main {
     }
 }
 
+.boxes {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1.6rem;
+
+    div {
+        font-size: 3.2rem;
+        border: #ffffff 3px solid;
+        padding: 2.4rem 4rem;
+        margin-bottom: 4.8rem;
+        .easeOut();
+
+        &:hover {
+            padding: 0.8rem 2.4rem;
+            background: @secondaryColor;
+            color: #ffffff;
+            
+            span {
+                color: @primaryColor;
+            }
+        }
+    }
+}
+
 .btnDark {
 .btn();
 background: darken(@primaryColor, 50);
@@ -149,6 +176,7 @@ color: #ffffff;
     background: lighten(@primaryColor, 50);
     color: #333;
 }
+
 
 #mainFooter {
     width: 100%;
