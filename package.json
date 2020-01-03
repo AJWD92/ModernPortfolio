@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Respoinsive Portfolio Website",
   "main": "index.js",
+  "homepage": "https://AJWD92.github.io/ModernPortfolio/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d index.html"
   },
   "author": "Aaron Doran",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^2.1.1"
+  }
 }
