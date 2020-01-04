@@ -401,7 +401,7 @@ main#home h1 {
 .aboutInfo {
   display: grid;
   grid-gap: 3rem;
-  grid-template-areas: 'bioImage bio bio' 'job1 job2 job3 job4 job5';
+  grid-template-areas: 'bioImage bio bio' 'job1 job2 job3' 'job4 job5';
   grid-template-columns: repeat(3, 1fr);
 }
 @media (max-width: 768px) {
