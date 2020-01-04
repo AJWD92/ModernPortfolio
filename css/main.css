@@ -2,7 +2,7 @@
   transition: all 0.5s ease-out;
 }
 .background#bgImg {
-  background-image: url(/Img/homeImg4.jpeg);
+  background-image: url(../Img/homeImg4.jpeg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -183,7 +183,7 @@ body {
   line-height: 1.5;
 }
 body#bgImg {
-  background-image: url(/Img/homeImg4.jpeg);
+  background-image: url(../Img/homeImg4.jpeg);
   background-attachment: fixed;
   background-size: cover;
 }
@@ -270,7 +270,7 @@ img {
 .menuBranding .portrait {
   width: 25rem;
   height: 25rem;
-  background: url(/Img/profileSm.jpg);
+  background: url(../Img/profileSm.jpg);
   border-radius: 50%;
   border: solid 0.3rem #1e90ff;
   background-position: center;
@@ -323,7 +323,7 @@ img {
     transform: translate3d(0, 0, 0);
   }
   div.menuBranding .portrait {
-    background: url(/Img/profileSm.jpg);
+    background: url(../Img/profileSm.jpg);
     width: 15rem;
     height: 15rem;
     background-position: center;
