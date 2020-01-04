@@ -75,7 +75,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
 
     @media @deviceMd {
-        grid-template-areas: 'bioImage' 'bio' 'job1' 'job2' 'job3' 'job4' 'job5';
+        grid-template-areas: 'bioImage' 'bio' 'job1' 'job2' 'job3';
 
         grid-template-columns: 1fr;
     }
@@ -109,16 +109,7 @@ main {
     line-height: 1.5;
     grid-area: job3;
 }
-.job4 {
-    font-size: 1.6rem;
-    line-height: 1.5;
-    grid-area: job4;
-}
-.job5 {
-    font-size: 1.6rem;
-    line-height: 1.5;
-    grid-area: job5;
-}
+
 
 .job {
     background: lighten(@primaryColor, 5);
