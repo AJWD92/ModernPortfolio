@@ -1,150 +1,150 @@
 .menuBtn {
-    position: absolute;
-    z-index: 3;
-    right: 3.5rem;
-    top: 3.5rem;
-    cursor: pointer;
-    .easeOut();
+	position: absolute;
+	z-index: 3;
+	right: 3.5rem;
+	top: 3.5rem;
+	cursor: pointer;
+	.easeOut();
 
-    .btnLine {
-        width: 2.8rem;
-        height: 0.3rem;
-        margin: 0 0 0.5rem 0;
-        background: #fff;
-        .easeOut();
-    }
+	.btnLine {
+		width: 2.8rem;
+		height: 0.3rem;
+		margin: 0 0 0.5rem 0;
+		background: #fff;
+		.easeOut();
+	}
 
-    &.close {
-        transform: rotate(180deg);
+	&.close {
+		transform: rotate(180deg);
 
-        .btnLine {
-            &:nth-child(1) {
-                transform: rotate(45deg) translate(5px, 5px);
-            }
-            &:nth-child(2) {
-                opacity: 0;
-            }
-            &:nth-child(3) {
-                transform: rotate(-45deg) translate(7px, -6px);
-            }
-        }
-    }
+		.btnLine {
+			&:nth-child(1) {
+				transform: rotate(45deg) translate(5px, 5px);
+			}
+			&:nth-child(2) {
+				opacity: 0;
+			}
+			&:nth-child(3) {
+				transform: rotate(-45deg) translate(7px, -6px);
+			}
+		}
+	}
 }
 
 .menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    opacity: 0.9;
-    visibility: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	opacity: 0.9;
+	visibility: hidden;
 
-    &.show {
-        visibility: visible;
-    }
+	&.show {
+		visibility: visible;
+	}
 
-    &Branding, &Nav {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
-        float: left;
-        width: 50%;
-        height: 100vh;
-        overflow: hidden;
-    }
+	&Branding,
+	&Nav {
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+		float: left;
+		width: 50%;
+		height: 100vh;
+		overflow: hidden;
+	}
 
-    &Nav {
-        margin: 0;
-        padding: 0;
-        background: darken(@primaryColor, 5);
-        list-style: none;
-        transform: translate3d(0, -100%, 0);
-        .easeOut();
+	&Nav {
+		margin: 0;
+		padding: 0;
+		background: darken(@primaryColor, 5);
+		list-style: none;
+		transform: translate3d(0, -100%, 0);
+		.easeOut();
 
-        &.show {
-            transform: translate3d(0, 0, 0);
-        }
-    }
-    &Branding {
-        background: @primaryColor;
-        .easeOut();
-        transform: translate3d(0, 100%, 0);
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
+	}
+	&Branding {
+		background: @primaryColor;
+		.easeOut();
+		transform: translate3d(0, 100%, 0);
 
-        &.show {
-            transform: translate3d(0, 0, 0);
-        }
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
 
-        .portrait {
-            width: 25rem;
-            height: 25rem;
-            background: url(../Img/profileSm.jpg);
-            border-radius: 50%;
-            border: solid 0.3rem @secondaryColor;
-            background-position: center;
+		.portrait {
+			width: 25rem;
+			height: 25rem;
+			background: url(../Img/profileSm.jpg);
+			border-radius: 50%;
+			border: solid 0.3rem @secondaryColor;
+			background-position: center;
+		}
+	}
 
-        }
-    }
+	.navItem {
+		transform: translate3d(60rem, 0, 0);
+		.easeOut();
 
-    .navItem {
-        transform: translate3d(60rem, 0, 0);
-        .easeOut();
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
+		&.active > a {
+			color: @secondaryColor;
+		}
+	}
 
-        &.show {
-            transform: translate3d(0, 0, 0);
-        }
-        &.active > a {
-            color: @secondaryColor;
-        }
-    }
+	.navLink {
+		display: inline-block;
+		position: relative;
+		font-size: 3rem;
+		text-transform: uppercase;
+		padding: 1.6rem 0;
+		color: #fff;
+		text-decoration: none;
+		.easeOut();
 
-    .navLink {
-        display: inline-block;
-        position: relative;
-        font-size: 3rem;
-        text-transform: uppercase;
-        padding: 1.6rem 0;
-        color: #fff;
-        text-decoration: none;
-        .easeOut();
-
-        &:hover {
-            color: @secondaryColor;
-        }
-    }
+		&:hover {
+			color: @secondaryColor;
+		}
+	}
 }
 
-ul.menuNav{
-    @media @deviceMd {
-        float: none;
-        width: 100%;
-        min-height: 0;
-        &.show {
-            transform: translate3d(0,0,0);
-        }
-            height: 75vh;
-            transform: translate3d(-100%, 0, 0);
-            font-size: 2.4rem;
-    }
+ul.menuNav {
+	@media @deviceMd {
+		float: none;
+		width: 100%;
+		min-height: 0;
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
+		height: 75vh;
+		transform: translate3d(-100%, 0, 0);
+		font-size: 2.4rem;
+	}
 }
 
 div.menuBranding {
-    @media @deviceMd {
-        float: none;
-        width: 100%;
-        min-height: 0;
-        &.show {
-            transform: translate3d(0, 0, 0);
-        }
+	@media @deviceMd {
+		float: none;
+		width: 100%;
+		min-height: 0;
+		&.show {
+			transform: translate3d(0, 0, 0);
+		}
 
-            height: 25vh;
-            transform: translate3d(100%, 0, 0);
+		height: 25vh;
+		transform: translate3d(100%, 0, 0);
 
-            .portrait {
-                background: url(../Img/profileSm.jpg);
-                width: 15rem;
-                height: 15rem;
-                background-position: center;
-                background-size: cover;
-            }
-        }
-    }
+		.portrait {
+			background: url(../Img/profileSm.jpg);
+			width: 15rem;
+			height: 15rem;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+}

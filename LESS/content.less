@@ -1,199 +1,193 @@
-h1, h2, h3, h4, h5, h6 {
-    &.lgHeading {
-        font-size: 6rem;
-    }
-    
-    &.smHeading {
-        font-size: 1.6rem;
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        background: rgba(lighten(@primaryColor, 0.2), 0.5);
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	&.lgHeading {
+		font-size: 6rem;
+	}
+
+	&.smHeading {
+		font-size: 1.6rem;
+		margin-bottom: 2rem;
+		padding: 0.2rem 1rem;
+		background: rgba(lighten(@primaryColor, 0.2), 0.5);
+	}
 }
 
 a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.6rem;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 1.6rem;
 }
 
 header {
-    position: fixed;
-    z-index: 2;
-    width: 100%;
+	position: fixed;
+	z-index: 2;
+	width: 100%;
 }
 
 .textSecondary {
-    color: @secondaryColor;
+	color: @secondaryColor;
 }
 
 main {
-    padding: 4rem;
-    height: 100%;
-    min-height: calc(100vh - 6rem);
+	padding: 4rem;
+	height: 100%;
+	min-height: calc(100vh - 6rem);
 
-    @media @deviceMd {
-        align-items: center;
-        text-align: center;
+	@media @deviceMd {
+		align-items: center;
+		text-align: center;
 
-        .lgHeading {
-            line-height: 1;
-            margin-bottom: 1.6rem;
-        }
-    }
+		.lgHeading {
+			line-height: 1;
+			margin-bottom: 1.6rem;
+		}
+	}
 
-    @media @deviceSm {
-        #home h1 {
-            margin-top: 10vh;
-        }
-    }
+	@media @deviceSm {
+		#home h1 {
+			margin-top: 10vh;
+		}
+	}
 
-    .icons {
-        margin-top: 1rem;
+	.icons {
+		margin-top: 1rem;
 
-        a {
-            padding: 0.4rem;
+		a {
+			padding: 0.4rem;
 
-            &:hover {
-                color: @secondaryColor;
-                .easeOut();
-            }
-        }
-    }
-    &#home {
-        overflow: hidden;
-        h1 {
-            margin-top: 20vh;
-        }
-    }
+			&:hover {
+				color: @secondaryColor;
+				.easeOut();
+			}
+		}
+	}
+	&#home {
+		overflow: hidden;
+		h1 {
+			margin-top: 20vh;
+		}
+	}
 }
 
 .aboutInfo {
-    display: grid;
-    grid-gap: 3rem;
-    grid-template-areas: 'bioImage bio bio' 'job1 job2 job3' ;
-    grid-template-columns: repeat(3, 1fr);
+	display: grid;
+	grid-gap: 3rem;
+	grid-template-areas: 'bioImage bio bio' 'job1 job2 job3';
+	grid-template-columns: repeat(3, 1fr);
 
-    @media @deviceMd {
-        grid-template-areas: 'bioImage' 'bio' 'job1' 'job2' 'job3';
+	@media @deviceMd {
+		grid-template-areas: 'bioImage' 'bio' 'job1' 'job2' 'job3';
 
-        grid-template-columns: 1fr;
-    }
+		grid-template-columns: 1fr;
+	}
 }
 
 .bioImage {
-    grid-area: bioImage;
-    margin: auto;
-    border-radius: 50%;
-    border: @secondaryColor 0.3rem solid;
+	grid-area: bioImage;
+	margin: auto;
+	border-radius: 50%;
+	border: @secondaryColor 0.3rem solid;
 }
 
 .bio {
-    grid-area: bio;
-    font-size: 2.4rem;
+	grid-area: bio;
+	font-size: 2.4rem;
 }
 
 .job1 {
-    font-size: 1.6rem;
-    line-height: 1.5;
-    grid-area: job1;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	grid-area: job1;
 }
 
 .job2 {
-    font-size: 1.6rem;
-    line-height: 1.5;
-    grid-area: job2;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	grid-area: job2;
 }
 .job3 {
-    font-size: 1.6rem;
-    line-height: 1.5;
-    grid-area: job3;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	grid-area: job3;
 }
 
-
 .job {
-    background: lighten(@primaryColor, 5);
-    padding: 0.8rem;
-    border-bottom: @secondaryColor 0.5rem solid;
+	background: lighten(@primaryColor, 5);
+	padding: 0.8rem;
+	border-bottom: @secondaryColor 0.5rem solid;
 }
 
 .projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.8rem;
-    @media @deviceMd {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    @media @deviceSm {
-        grid-template-columns: 1fr;
-    }
-    .item {
-        h1 {
-            font-size: 2rem;
-        }
-        p {
-            font-size: 1.8rem;
-        }
-    }
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 0.8rem;
+	@media @deviceMd {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media @deviceSm {
+		grid-template-columns: 1fr;
+	}
 
-    img {
-        width: 100%;
-        border: 3px #B22222 solid;
+	img {
+		width: 100%;
+		border: 3px #b22222 solid;
 
-        &:hover {
-            opacity: 0.5;
-            border-color: @secondaryColor;
-            .easeOut();
-        }
-    }
+		&:hover {
+			opacity: 0.5;
+			border-color: @secondaryColor;
+			.easeOut();
+		}
+	}
 }
 
 .boxes {
-    display: flex;
-    // flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 1.6rem;
+	display: flex;
+	// flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	margin-top: 1.6rem;
 
-    div {
-        font-size: 3.2rem;
-        border: #ffffff 3px solid;
-        padding: 2.4rem 4rem;
-        margin-bottom: 4.8rem;
-        .easeOut();
+	div {
+		font-size: 3.2rem;
+		border: #ffffff 3px solid;
+		padding: 2.4rem 4rem;
+		margin-bottom: 4.8rem;
+		.easeOut();
 
-        &:hover {
-            padding: 0.8rem 2.4rem;
-            background: @secondaryColor;
-            color: #ffffff;
-            
-            span {
-                color: @primaryColor;
-            }
-        }
-    }
+		&:hover {
+			padding: 0.8rem 2.4rem;
+			background: @secondaryColor;
+			color: #ffffff;
+
+			span {
+				color: @primaryColor;
+			}
+		}
+	}
 }
 
 .btnDark {
-.btn();
-background: darken(@primaryColor, 50);
-color: #ffffff;
+	.btn();
+	background: darken(@primaryColor, 50);
+	color: #ffffff;
 }
 
 .btnLight {
-    .btn();
-    background: lighten(@primaryColor, 50);
-    color: #333;
+	.btn();
+	background: lighten(@primaryColor, 50);
+	color: #333;
 }
-
 
 #mainFooter {
-    width: 100%;
-    text-align: center;
-    padding: 1.6rem;
-    background: darken(@primaryColor, 10);
-    color: #ffffff;
-    height: 6rem;
+	width: 100%;
+	text-align: center;
+	padding: 1.6rem;
+	background: darken(@primaryColor, 10);
+	color: #ffffff;
+	height: 6rem;
 }
-
